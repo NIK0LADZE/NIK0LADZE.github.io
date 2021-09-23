@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root {
+  --pinkish-red-color: rgba(69, 2, 29, 0.88);
+  --light-blue: rgb(53, 178, 187);
+  --light-pink: #ffe5e5;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url(https://i.imgur.com/sCacxxH.jpg) fixed center no-repeat;
+  background-size: cover;
+  color: var(--light-pink);
+}
+
+#survey {
+  width: 100%;
+  max-width: 900px;
+  margin: 195px auto;
+  text-align: center;
+  background: var(--pinkish-red-color);
+  border: #ff0066 solid 2px;
+  border-radius: 10px;
+  padding: 5px 3px 55px 3px;
+}
+
+#title {
+  margin: 0;
+}
+
+#description {
+  margin: 3px;
+  font-style: italic;
+  font-size: 18px;
+}
+
+hr {
+  border: 1px solid #ff0066;
+  margin-bottom: 30px;
+}
+
+form {
+  padding-left: 30px;
+  padding-right: 60px;
+}
+
+.labels {
+  display: block;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: -21px;
+  font-size: 23px;
+  padding: 0;
+}
+
+.inputs {
+  width: 100%;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 20px;
+  margin-left: 0;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#dropdown {
+  width: 104%;
+}
+
+input[type=radio], [type=checkbox] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px 0px 0px;
+}
+
+.options {
+  display: flex;
+  margin-bottom: -20px;
+  align-items: center;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.favclubopts {
+  font-size: 17px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  margin-top: 0;
+}
+
+input:focus, textarea:focus {
+  border: 2px solid #ff0066;
+  outline: 0;
+}
+
+#submit {
+  padding: 10px 15px 10px 15px;
+  width: 104%;
+  font-size: 18px;
+  color: white;
+  background: #ff0066;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

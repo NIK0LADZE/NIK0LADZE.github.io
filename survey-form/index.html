@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ka-ge">
+<head>
+  <title>Survey Page</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<div id="survey">
+<h1 id="title">Survey Form</h1>
+<p id="description">This survey collects the information about night life preferences</p><hr>
+<form id="survey-form">
+  <label class="labels" id="name-label" for="name">Name</label><br>
+  <input class="inputs" id="name" type="text" placeholder="Enter your name" required><br>
+  <label class="labels" id="email-label" for="email">Email</label><br>
+  <input class="inputs" id="email" type="email" placeholder="Enter your Email" required><br>
+  <label class="labels" id="number-label" for="number">Age</label><br>
+  <input class="inputs" id="number" type="number" min="18" max="50" placeholder="Age"><br>
+  <p class="labels">Favourite club</p><br>
+  <select class="inputs" id="dropdown">
+    <option disabled selected>Choose your favourite club</option>
+    <option class="favclubopts">Bassiani</option>
+    <option class="favclubopts">Khidi</option>
+    <option class="favclubopts">Berghain</option>
+    <option class="favclubopts">Trezor</option>
+  </select><br>
+  <p class="labels">What is your favourite genre?</p><br>
+  <label class="options"><input type="radio" name="genre" value="techno">Techno</label><br>
+  <label class="options"><input type="radio" name="genre" value="trance">Trance</label><br>
+  <label class="options"><input type="radio" name="genre" value="acid techno">Acid Techno</label><br>
+  <label class="options"><input type="radio" name="genre" value="melodic">Melodic Techno</label><br>
+  <label class="options"><input type="radio" name="genre" value="house">House</label><br>
+  <p class="labels">Chose favourite artists</p><br>
+  <label class="options"><input type="checkbox" name="artists" value="ihatemodels">I Hate Models</label><br>
+  <label class="options"><input type="checkbox" name="artists" value="inhaltdernacht">Inhalt Der Nacht</label><br>
+  <label class="options"><input type="checkbox" name="artists" value="jeffmills">Jeff Mills</label><br>
+  <label class="options"><input type="checkbox" name="artists" value="999999999">999999999</label><br>
+  <label class="options"><input type="checkbox" name="artists" value="regal">Regal</label><br>
+  <p class="labels">Comment</p><br>
+  <textarea class="inputs" placeholder="Enter your comment here..."></textarea><br>
+  <button id="submit">Submit</button>
+</form>
+</div>
