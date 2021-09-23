@@ -1,3 +1,272 @@
-h1 {
-  color: aqua;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Lobster&display=swap&family=Bebas+Neue&display=swap&family=Fredoka+One&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: white;
+}
+
+/* Navigation system */
+
+.navbar {
+  z-index: 10;
+  font-family: "Lobster", cursive;
+  display: flex;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+  position: fixed;
+  justify-content: flex-end;
+  width: 100%;
+  background: rgb(0, 107, 104);
+  background: linear-gradient(
+    338deg,
+    rgba(0, 107, 104, 1) 0%,
+    rgba(9, 98, 121, 1) 100%
+  );
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    justify-content: center;
+  }
+}
+
+.navbar ul {
+  margin: 0;
+  display: flex;
+  margin-right: 50px;
+}
+
+.navbar li {
+  display: block;
+  list-style: none;
+  font-size: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  padding: 20px 20px;
+  color: white;
+  float: left;
+  transition: 0.15s;
+}
+
+.navbar li a:hover {
+  background-color: #00cf00;
+  padding: 17.5px 20px;
+  border-bottom: solid 5px;
+  transition: 0.15s;
+}
+
+/* Welcome page */
+
+#welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(7, 63, 84);
+  background: linear-gradient(
+    326deg,
+    rgba(7, 63, 84, 1) 0%,
+    rgba(2, 14, 66, 1) 100%
+  );
+}
+
+#welcome-section > h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  margin: 0;
+}
+
+#welcome-section > p {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 100;
+}
+
+/* Portfolio */
+
+#projects {
+  background-color: #011128;
+  width: 100%;
+}
+
+#projects > h1 {
+  margin: 0;
+  font-family: "Fredoka One", cursive;
+  padding-top: 2em;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.grid {
+  margin: 0 auto;
+  padding: 5em 1em;
+  max-width: 1200px;
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 6rem 4rem;
+  justify-content: space-between;
+}
+
+.card {
+  cursor: pointer;
+  transform: translate3d(0, 0, 35px) perspective(800px);
+  transform-style: preserve-3d;
+}
+
+.project-tile {
+  position: absolute;
+  margin-bottom: 200px;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background: black;
+  z-index: 1;
+  opacity: 1;
+  transform: rotateY(0) translateZ(40px);
+  transition: 0.65s;
+  box-shadow: -2px 2px 20px rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.card:hover .project-tile {
+  transform: rotateY(-180deg) translateZ(0px);
+  opacity: 1;
+  transition: 0.65s;
+}
+
+.back {
+  background: rgb(1, 38, 66);
+  background: linear-gradient(
+    169deg,
+    rgba(1, 38, 66, 1) 0%,
+    rgba(1, 29, 34, 1) 100%
+  );
+  position: relative;
+  display: grid;
+  flex-direction: rows;
+  width: 100%;
+  height: 300px;
+  transform: rotateY(180deg) translateZ(0px);
+  transition: 0.65s;
+  opacity: 1;
+  box-shadow: -2px 2px 20px rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.card:hover .back {
+  transform: rotateY(0deg) translateZ(40px);
+  opacity: 1;
+  transition: 0.65s;
+}
+
+.back div {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.back p {
+  font-family: "Fredoka One", cursive;
+  font-weight: 100;
+  text-align: justify;
+  display: flex;
+  color: white;
+  margin: 0;
+  padding: 1.6em;
+}
+
+.back a {
+  font-family: "Lobster", cursive;
+  font-size: 1.5em;
+  padding: 10px 25px 12px 25px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  background: #0b5163;
+  border: solid 0px;
+  border-top: none;
+  border-radius: 0px 0px 45px 45px;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4);
+  transition: 0.07s;
+}
+
+.back a:hover {
+  padding: 7.5px 25px 9.5px 25px;
+  border-bottom: solid 5px;
+  background: #00cf00;
+  transition: 0.07s;
+}
+
+/* Contact */
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(5, 54, 91);
+  background: linear-gradient(
+    42deg,
+    rgba(5, 54, 91, 1) 0%,
+    rgba(1, 30, 83, 1) 100%
+  );
+}
+
+#contact h1 {
+  color: #fff;
+  padding-top: 1em;
+  font-size: 4rem;
+}
+
+.links {
+  display: grid;
+  width: 40%;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1280px) {
+  .links {
+    width: 60%;
+  }
+}
+
+.links h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: white;
+}
+
+.links a {
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.links a:hover {
+  transform: translateY(-8px);
+  transition: 0.25s;
+}
+
+footer h3 {
+  position: relative;
+  border-top: 5px solid;
+  padding: 1em;
 }
